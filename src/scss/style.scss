@@ -1,19 +1,103 @@
 
 // @import "fonts";
+@import "general.scss";
+@import "reset.scss";
+@import "varriables.scss";
 
 
-body {
-    background-color: aquamarine;
-}
+/////////////HEADER//////////////////////////
 
-@media (max-width: 768) {
-    body {
-        background-color: black;
+.header {
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
     }
-}
 
-@media (max-width: 768) {
-    body {
-        color: black;
+    &__logo {
+        width: 68px;
+        height: 54px;
+        margin-right: 45px;
     }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    &__item {
+display: flex;
+
+    }
+
+    &__burger {
+        width: 30px;
+        height: 16px;
+        margin-right: 127px;
+    }
+
+    &__number {
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+
+    &__request {
+        color: $secondary-color;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-right: 47px;
+    }
+
+  &__phone {
+      position: relative;
+
+      &::before {
+          content: "";
+          width: 80px;
+          height: 80px;
+          border: 1px solid #FFFFFF;
+          opacity: 0.2;
+          border-radius: 50%;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform: translate(40%, -40%);
+          
+      }
+
+          &::after {
+              content: "";
+              width: 60px;
+              height: 60px;
+              border: 1px solid #FFFFFF;
+              opacity: 0.4;
+              border-radius: 50%;
+              position: absolute;
+              top: 0;
+              right: 0;
+              transform: translate(38%, -38%);
+          }
+  }
+
+  &__phone-wrapper {
+    position: relative;
+
+    &::after {
+        content: "";
+            width: 40px;
+            height: 40px;
+           background: $main-color;
+            opacity: 0.2;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(38%, -38%);
+    }
+  }
 }
